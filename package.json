@@ -1,0 +1,42 @@
+{
+  "name": "e-commerce-api",
+  "version": "1.0.0",
+  "description": "An e-commerce API to improve my skills.",
+  "keywords": [
+    "Database",
+    "Express",
+    "Node",
+    "Stripe",
+    "Ecommerce",
+    "TypeORM",
+    "TypeScript"
+  ],
+  "homepage": "https://github.com/JuniorThume/E-Commerce-API#readme",
+  "bugs": {
+    "url": "https://github.com/JuniorThume/E-Commerce-API/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JuniorThume/E-Commerce-API.git"
+  },
+  "license": "MIT",
+  "author": "Valmir Thume Junior",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "dependencies": {
+    "celebrate": "^15.0.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "express-async-error": "^0.0.2",
+    "zod": "^3.24.4"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.18",
+    "@types/express": "^5.0.1",
+    "nodemon": "^3.1.10"
+  }
+}
