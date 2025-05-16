@@ -22,9 +22,10 @@
   "license": "MIT",
   "author": "Valmir Thume Junior",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "test": "npm run test"
+    "test": "npm run test",
+    "dev": "nodemon src/index.ts localhost"
   },
   "dependencies": {
     "celebrate": "^15.0.3",
@@ -32,11 +33,17 @@
     "dotenv": "^16.5.0",
     "express": "^5.1.0",
     "express-async-error": "^0.0.2",
+    "pg": "^8.16.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.24",
+    "typescript": "^5.8.3",
     "zod": "^3.24.4"
   },
   "devDependencies": {
     "@types/cors": "^2.8.18",
     "@types/express": "^5.0.1",
-    "nodemon": "^3.1.10"
+    "@types/reflect-metadata": "^0.0.5",
+    "nodemon": "^3.1.10",
+    "ts-node-dev": "^2.0.0"
   }
 }
