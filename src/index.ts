@@ -1,7 +1,7 @@
 import 'reflect-metadata';
 import express from 'express';
 import 'express-async-error';
-import '@config/container';
+import '@shared/container';
 import { errors } from 'celebrate';
 import cors from 'cors';
 import initialize from './config/initialize';
