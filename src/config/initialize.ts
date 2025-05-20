@@ -1,9 +1,9 @@
-import { app } from "../index";
+import app from "../index";
 import env from "./env";
-import appDataSource from "@config/typeorm";
+import { dataSource } from "@config/typeorm";
 
 const initialize = () => {
-  appDataSource
+  dataSource
     .initialize()
     .then(() => {
       console.log("✅ - Database is up!");
