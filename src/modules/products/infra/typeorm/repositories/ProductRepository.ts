@@ -4,9 +4,11 @@ import { IProductRepository } from "@products/domain/repositories/IProductReposi
 import { Repository } from "typeorm";
 import { Product } from "../entities/Product";
 import { dataSource } from "@config/typeorm";
+import { IVariety } from '@products/domain/models/IVariety';
+import { Variety } from '../entities/Variety';
 
 export class ProductRepository implements IProductRepository {
-  private ormRepository: Repository<Product>;
+  protected ormRepository: Repository<Product>;
   constructor() {
     this.ormRepository = dataSource.getRepository(Product);
   }
@@ -44,5 +46,22 @@ export class ProductRepository implements IProductRepository {
     await this.ormRepository.delete({ id: product.id })
 
     return;
+  }
+
+  async getByDescription(description: string): Promise<IProduct | null> {
+    const result = await this.ormRepository.findOne({
+      where: { description }
+    });
+
+    return result;
+  }
+
+  async getVarieties(id: number): Promise<Variety[] | undefined> {
+    const result = await this.ormRepository.findOne({
+      where: { id },
+      relations: ['varieties']
+    });
+
+    return result?.varieties;
   }
 }
